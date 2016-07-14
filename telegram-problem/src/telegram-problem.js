@@ -1,7 +1,8 @@
 var createWriter = function(w){
   var writer = function(lines){
     var output = "";
-    var words = lines.split(" ")
+    var words = lines.replace("\n", " ").split(" ")
+   
     var currentOutput = words[0];
     var currentLineLength = words[0].length;
     for(var i = 1; i< words.length; i++){
@@ -12,12 +13,11 @@ var createWriter = function(w){
         currentOutput = word;
         currentLineLength = word.length;
       } else {
-        currentOutput += "." + word;
+        currentOutput += " " + word;
         currentLineLength += word.length + 1;
       }
     }
     output+= currentOutput;
-    console.log("output: ")
     console.log(output);
     return output;
   }
