@@ -39,7 +39,7 @@
         var output = writer("Do you know the muffin man?\nThe muffing man?\nThe muffin man?").split("\n");
         expect(output[0].length).toBe(6);
         expect(output[1].length).toBe(8);
-        expect(output[2].length).toBe(4);
+        expect(output[3].length).toBe(8);
       });
 
     });

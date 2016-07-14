@@ -18,7 +18,6 @@ var createWriter = function(w){
       }
     }
     output+= currentOutput;
-    console.log(output);
     return output;
   }
   return writer;
