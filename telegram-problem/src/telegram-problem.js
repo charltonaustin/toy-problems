@@ -1,3 +1,6 @@
-var someFunction = function(){
-  return 0;
+var createWriter = function(w){
+  var writer = function(lines){
+     
+  }
+  return writer;
 }

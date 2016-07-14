@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
-        expect(someFunction()).toBe(1);
+  describe('Create writer', function () {
+    describe('when called', function () {
+      it('should return correct type', function () {
+        expect(createWriter()).toEqual(jasmine.any(Function));
       });
     });
   });
