@@ -8,11 +8,15 @@ var isMultipleOfFive = function(number) {
 
 var eulerProblemOne = function(upperBound){
   var sum = 0;
-  for(var i = 0; i < upperBound; i++){
-    if(isMultipleOfThree(i) || isMultipleOfFive(i)){
+
+  for(var i = 3; i < upperBound; i+=3){
+    if(!isMultipleOfFive(i)){
       sum += i;
     }
   }
+
+  for(var i=5; i < upperBound; i+=5){
+    sum +=i;
+  }
   return sum;
 }
-
