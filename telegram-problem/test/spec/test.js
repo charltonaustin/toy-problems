@@ -41,7 +41,6 @@
         expect(output[1].length).toBe(8);
         expect(output[3].length).toBe(8);
       });
-
     });
   });
 })();
