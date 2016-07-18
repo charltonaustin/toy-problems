@@ -1,11 +1,24 @@
 (function () {
   'use strict';
 
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
-        expect(someFunction()).toBe(1);
-      });
+  describe('isPallidrome', function () {
+    it('should return true', function () {
+      expect(isPallidrome(1111)).toBe(true);
+    });
+    it('should return true', function () {
+      expect(isPallidrome(1919)).toBe(false);
+    });
+  });
+  
+  describe('findPallidromes',function(){
+    it('should find 9009',function(){
+      expect(findPallidromes(99)).toBe(9009);
+    });
+  });
+
+  describe('findPallidromes',function(){
+    it('should find ???',function(){
+      expect(findPallidromes(999)).toBe(906609);
     });
   });
 })();
