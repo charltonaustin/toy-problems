@@ -18,6 +18,7 @@
   describe('largestPrimeFactor', function(){
     it('should find largest for 13195', function(){
       expect(findPrimeFactors(13195)).toBe(29);
+
     });
     it('should find largest for 61', function(){
       expect(findPrimeNumber(61)).toBe(61);
@@ -28,6 +29,13 @@
 
     it('should find largest for 600851475143', function(){
      expect(findPrimeNumber(600851475143)).toBe(6857);
+      /* 
+         The expectation below runs out of memory. 
+         So I used fermant's factorization to find 
+         the largest prime number.
+       */
+
+      // expect(findPrimeFactors(600851475143)).toBe(6857);
     });
 
   });
