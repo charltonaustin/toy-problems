@@ -1,0 +1,20 @@
+{
+  "name": "telegram-problem",
+  "homepage": "https://github.com/charltonaustin/toy-problems",
+  "authors": [
+    "charltonaustin <charlton.austin@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-core": "jasmine#^2.4.1"
+  }
+}
