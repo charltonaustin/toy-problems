@@ -24,7 +24,7 @@ var smallestDivisbleBy = function(number){
   var foundRightNumber = false;
   var maybeRightNumber = number;
   while(!foundRightNumber){
-    maybeRightNumber++;
+    maybeRightNumber += number;
     if(isDivisibleByRange(maybeRightNumber)){
       foundRightNumber = true;
     }
