@@ -31,7 +31,7 @@
      expect(findPrimeNumber(600851475143)).toBe(6857);
       /* 
          The expectation below runs out of memory. 
-         So I used fermant's factorization to find 
+         So I used Fermat's factorization to find 
          the largest prime number.
        */
 
@@ -40,12 +40,12 @@
 
   });
 
-  describe('findFermantFactorization', function(){
-    it('should find fermant factorizatio for 13195', function(){
-      expect(findFermantFactorization(Math.ceil(Math.sqrt(13195)), 13195)).toEqual([118, 27]);
+  describe('findFermatFactorization', function(){
+    it('should find Fermat factorizatio for 13195', function(){
+      expect(findFermatFactorization(Math.ceil(Math.sqrt(13195)), 13195)).toEqual([118, 27]);
     });
     it('should return false if a is too large', function(){
-      expect(findFermantFactorization(13195, 13195)).toEqual(false);
+      expect(findFermatFactorization(13195, 13195)).toEqual(false);
     });
   });
 

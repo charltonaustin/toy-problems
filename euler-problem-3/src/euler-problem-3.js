@@ -28,7 +28,7 @@ var findPrimeFactors = function(number){
   return largestPrimeFactor;
 }
 
-var findFermantFactorization = function(a, number){
+var findFermatFactorization = function(a, number){
   if(number % 2 === 0){
     return 0;
   }
@@ -54,7 +54,7 @@ var isPrimeNumber = function(number){
 }
 
 var findPrimeNumber = function(number){
-  var factors = findFermantFactorization(Math.ceil(Math.sqrt(number)), number);
+  var factors = findFermatFactorization(Math.ceil(Math.sqrt(number)), number);
   while(factors){
     var addFactor = factors[0] + factors[1];
     var subFactor = factors[0] - factors[1];
@@ -64,7 +64,7 @@ var findPrimeNumber = function(number){
     if(isPrimeNumber(subFactor)){
       return subFactor;
     }
-    factors = findFermantFactorization(factors[0]+1, number);
+    factors = findFermatFactorization(factors[0]+1, number);
   }
 
   return primes;
