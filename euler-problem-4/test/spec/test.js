@@ -4,8 +4,11 @@
   describe('isPallidrome', function () {
     it('should return true', function () {
       expect(isPallidrome(1111)).toBe(true);
+      expect(isPallidrome(11111)).toBe(true);
+      expect(isPallidrome(21012)).toBe(true);
+      expect(isPallidrome(2112)).toBe(true);
     });
-    it('should return true', function () {
+    it('should return false', function () {
       expect(isPallidrome(1919)).toBe(false);
     });
   });
