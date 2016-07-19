@@ -58,8 +58,6 @@ var findPrimeNumber = function(number){
   while(factors){
     var addFactor = factors[0] + factors[1];
     var subFactor = factors[0] - factors[1];
-    console.log("addFactor: ", addFactor)
-    console.log("subFactor: ", subFactor)
     if(isPrimeNumber(addFactor)){
       return addFactor;
     }
