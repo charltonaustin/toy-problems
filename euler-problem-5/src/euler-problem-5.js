@@ -19,6 +19,15 @@ var isDivisibleByRangeCreator = function(range){
   };
 }
 
-var smallestDivisbleBy = function(){
-  return 0;
+var smallestDivisbleBy = function(number){
+  var isDivisibleByRange = isDivisibleByRangeCreator(number);
+  var foundRightNumber = false;
+  var maybeRightNumber = number;
+  while(!foundRightNumber){
+    maybeRightNumber++;
+    if(isDivisibleByRange(maybeRightNumber)){
+      foundRightNumber = true;
+    }
+  }
+  return maybeRightNumber;
 }

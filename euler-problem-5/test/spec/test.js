@@ -35,8 +35,12 @@
   });
 
   describe('smallestDivisbleBy',function(){
-    it('should work for number 1 through 10',function(){
+    it('should work for number 1 through 10 (2520)',function(){
       expect(smallestDivisbleBy(10)).toBe(2520);
+    });
+
+    it('should work for number 1 through 20 ???', function(){
+      expect(smallestDivisbleBy(20)).toBe(232792560);
     });
   });
 })();
