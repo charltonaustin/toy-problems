@@ -1,7 +1,9 @@
 (function () {
   'use strict';
+  var power = require('../src/problem.js');
 
   describe('isMultipleOfThree', function () {
+    var isMultipleOfThree = power.isMultipleOfThree;
     it('should return false', function () {
       expect(isMultipleOfThree(1)).toBe(false);
     });
@@ -13,6 +15,7 @@
 
 
   describe('isMultipleOfFive', function () {
+    var isMultipleOfFive = power.isMultipleOfFive;
     it('should return false', function () {
       expect(isMultipleOfFive(1)).toBe(false);
     });
@@ -23,6 +26,7 @@
   });
 
   describe('eulerProblemOne', function(){
+    var eulerProblemOne = power.eulerProblemOne;
     it('should work with 10', function(){
       var actual = eulerProblemOne(10);
       expect(actual).toBe(23);

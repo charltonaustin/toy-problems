@@ -20,3 +20,7 @@ var eulerProblemOne = function(upperBound){
   }
   return sum;
 }
+
+module.exports = {isMultipleOfThree: isMultipleOfThree,
+                 isMultipleOfFive: isMultipleOfFive,
+                 eulerProblemOne: eulerProblemOne}
