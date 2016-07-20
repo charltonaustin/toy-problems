@@ -4,8 +4,12 @@ What is the 10001 prime number?
 
 [Source](https://projecteuler.net/problem=7)
 
+# Dependencies
+1. npm
+1. node
+
 To run Jasmine tests run
 ```
-$ bower install
-$ open ./test/index.js
+$ npm install
+$ npm test
 ```
