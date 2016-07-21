@@ -7,3 +7,4 @@
 1. July 18, 2016 - Euler Problem 4 - Largest pallidrome
 1. July 19, 2016 - Euler Problem 5 - Smallest number evenly divisable.
 1. July 20, 2016 - Euler Problem 6 - Difference between sum of the squares.
+1. July 21, 2016 - Euler Problem 8 - Find the 1001st prime number.
