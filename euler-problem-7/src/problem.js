@@ -1,10 +1,10 @@
 var findPrimeN = function(number){
-  var primes = [2, 3]
+  var primes = [2]
   var numbers = [];
   while(primes.length < number){
+    // Grow the numbers array
     var start = primes[primes.length-1] + 1;
     var growth = primes[primes.length-1];
-    // Grow the numbers array
     for(var i = start; i < start + growth; i++){
       numbers.push(i);
     }
@@ -27,7 +27,7 @@ var findPrimeN = function(number){
       }
     }
 
-    // move a prime from numbers to primes
+    // move prime numbers to primes
     for(var i = 0; i < numbers.length; i++){
       primes.push(numbers[i]);
     }
