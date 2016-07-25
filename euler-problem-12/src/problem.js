@@ -36,35 +36,6 @@ var highlyDivisible = (numberOfDivisors) => {
   return 0;
 }
 
-var primeNumbers = [2];
-var findPrimeNumbersLessThan = (number) => {
-  var primes = [];
-  if(primeNumbers[primeNumbers.length-1] > number){
-    for(var i = 0; i < primeNumbers.length; i++){
-      if(primeNumbers[i] < number){
-        primes.push(primeNumbers[i]);
-      }
-    }
-  }else{
-    for(var i = primeNumbers[primeNumbers.length -1]; i < number ; i++){
-      primeNumbers.push(i);
-    }
-
-    for(var i = 0; i < primeNumbers.length; i++){
-      for(var j = i + 1; j < primeNumbers.length; j++){
-        if(primeNumbers[j] % primeNumbers[i] === 0){
-          primeNumbers.splice(j, 1);
-        }
-      }
-    }
-    for(var i = 0; i < primeNumbers.length; i++){
-      primes.push(primeNumbers[i]);
-    }
-  }
-  
- 
-  return primes;
-}
 
 var findPrimeN = function(number){
   var primes = [2]
@@ -137,7 +108,6 @@ var totalNumberOfDivisors = (divisorPowers) => {
 }
 
 module.exports = {highlyDivisible, 
-                  findPrimeNumbersLessThan,
                   getDivisors,
                   findPowersOfDivisors,
                   totalNumberOfDivisors};

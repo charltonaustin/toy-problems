@@ -1,7 +1,6 @@
 (() => {
   'use strict';
   var highlyDivisible = require('../src/problem.js').highlyDivisible;
-  var findPrimeNumbersLessThan = require('../src/problem.js').findPrimeNumbersLessThan;
   var getDivisors = require('../src/problem.js').getDivisors;
   var findPowersOfDivisors = require('../src/problem.js').findPowersOfDivisors;
   var totalNumberOfDivisors = require('../src/problem.js').totalNumberOfDivisors;
@@ -9,13 +8,6 @@
   describe('highlyDivisible',  () => {
     it('should find lowest number with over five divisors',  () => {
       expect(highlyDivisible(5)).toBe(28);
-    });
-  });
-
-  describe('findPrimeNumbersLessThan', () => {
-    it('should find the prime numbers less than 10', () => {
-      expect(findPrimeNumbersLessThan(10)).toEqual([2,3,5,7]);
-      expect(findPrimeNumbersLessThan(12)).toEqual([2,3,5,7,11]);
     });
   });
 
