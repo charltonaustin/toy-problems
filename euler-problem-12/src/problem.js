@@ -20,34 +20,93 @@ What is the value of the first triangle number to have over five hundred divisor
  */
 
 var highlyDivisible = (numberOfDivisors) => {
-  // find the prime numbers less than a number
-  // check which prime numbers are a divisor
-  // find the powers of those divisors
-  // calculate the total number of divisors
-  // check that this if this is larger than
-  // number of divisors
+  var number = 0;
+  var i = 1;
+  var primes = findPrimeN(500);
+  while(true){
+    number += i;
+    var divisors = getDivisors(number, primes);
+    var powers = findPowersOfDivisors(number, divisors);
+    var numOfDivisors = totalNumberOfDivisors(powers);
+    if(numOfDivisors > numberOfDivisors){
+      return number;
+    }
+    i++;
+  }
   return 0;
 }
 
+var primeNumbers = [2];
 var findPrimeNumbersLessThan = (number) => {
-  var primeNumbers = [];
-  for(var i = 2; i < number; i++){
-    primeNumbers.push(i);
-  }
-  
-  for(var i = 0; i < primeNumbers.length; i++){
-    for(var j = i + 1; j < primeNumbers.length; j++){
-      if(primeNumbers[j] % primeNumbers[i] === 0){
-        primeNumbers.splice(j, 1);
+  var primes = [];
+  if(primeNumbers[primeNumbers.length-1] > number){
+    for(var i = 0; i < primeNumbers.length; i++){
+      if(primeNumbers[i] < number){
+        primes.push(primeNumbers[i]);
       }
     }
+  }else{
+    for(var i = primeNumbers[primeNumbers.length -1]; i < number ; i++){
+      primeNumbers.push(i);
+    }
+
+    for(var i = 0; i < primeNumbers.length; i++){
+      for(var j = i + 1; j < primeNumbers.length; j++){
+        if(primeNumbers[j] % primeNumbers[i] === 0){
+          primeNumbers.splice(j, 1);
+        }
+      }
+    }
+    for(var i = 0; i < primeNumbers.length; i++){
+      primes.push(primeNumbers[i]);
+    }
   }
-  return primeNumbers;
+  
+ 
+  return primes;
+}
+
+var findPrimeN = function(number){
+  var primes = [2]
+  var numbers = [];
+  while(primes.length < number){
+    // Grow the numbers array
+    var start = primes[primes.length-1] + 1;
+    var growth = primes[primes.length-1];
+    for(var i = start; i < start + growth; i++){
+      numbers.push(i);
+    }
+
+    // Remove composite numbers
+    for(var i = 0; i < primes.length; i++){
+      for(var j = 0; j < numbers.length; j++){
+        if(numbers[j] % primes[i] === 0){
+          numbers.splice(j,1);
+        }
+      }
+    }
+
+
+    for(var i = 0; i < numbers.length; i++){
+      for(var j = 1; j < numbers.length; j++){
+        if(numbers[j] % number[i] === 0){
+          number.splice(j,1);
+        }
+      }
+    }
+
+    // move prime numbers to primes
+    for(var i = 0; i < numbers.length; i++){
+      primes.push(numbers[i]);
+    }
+    numbers = [];
+  }
+  return primes;
 }
 
 var getDivisors = (number, maybeDivisor) =>{
   var divisors = [];
-  for(var i = 0; i < maybeDivisor.length; i++){
+  for(var i = 0; i < maybeDivisor.length && maybeDivisor[i] < number; i++){
     if(number % maybeDivisor[i] === 0){
       divisors.push(maybeDivisor[i]);
     }
@@ -57,17 +116,13 @@ var getDivisors = (number, maybeDivisor) =>{
 
 var findPowersOfDivisors = (number, divisors) =>{
   var powers = [];
-  var lastCount = 1;
-  var lastDivisor = 1;
-  for(var i = divisors.length-1 ; i >= 0; i--){
-    var total = divisors[i] * lastDivisor * lastCount;
+  var total = number;
+  for(var i = 0 ; i < divisors.length; i++){
     var count = 0;
-    while(total <= number){
+    while(total % divisors[i] === 0){
+      total = total / divisors[i];
       count++;
-      total *= divisors[i];
     }
-    lastCount = count;
-    lastDivisor = divisors[i];
     powers.push(count+1);
   }
   return powers;
