@@ -55,6 +55,34 @@ var getDivisors = (number, maybeDivisor) =>{
   return divisors;
 }
 
+var findPowersOfDivisors = (number, divisors) =>{
+  var powers = [];
+  var lastCount = 1;
+  var lastDivisor = 1;
+  for(var i = divisors.length-1 ; i >= 0; i--){
+    var total = divisors[i] * lastDivisor * lastCount;
+    var count = 0;
+    while(total <= number){
+      count++;
+      total *= divisors[i];
+    }
+    lastCount = count;
+    lastDivisor = divisors[i];
+    powers.push(count+1);
+  }
+  return powers;
+}
+
+var totalNumberOfDivisors = (divisorPowers) => {
+  var total = 1;
+  for(var i = 0; i < divisorPowers.length; i++){
+    total*=divisorPowers[i];
+  }
+  return total;
+}
+
 module.exports = {highlyDivisible, 
                   findPrimeNumbersLessThan,
-                  getDivisors};
+                  getDivisors,
+                  findPowersOfDivisors,
+                  totalNumberOfDivisors};
