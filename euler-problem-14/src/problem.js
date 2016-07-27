@@ -14,6 +14,8 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
+var alreadyCalculated = {1 : 1}
+
 var longestCollatzSeq = function(){
   var longestChainSteps = 0;
   var longestChainStart = 0;
@@ -21,6 +23,11 @@ var longestCollatzSeq = function(){
     var steps = 0;
     var number = i;
     while(number != 1){
+      if(alreadyCalculated[number]){
+        steps += alreadyCalculated[number];
+        number = 1;
+        break;
+      }
       steps++
       if(number % 2 === 0){
         number = number / 2
@@ -28,6 +35,7 @@ var longestCollatzSeq = function(){
         number = number*3 + 1
       }
     }
+    alreadyCalculated[i] = steps;
 
     if(steps > longestChainSteps){
       longestChainSteps = steps;
