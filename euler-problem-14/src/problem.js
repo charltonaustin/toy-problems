@@ -15,17 +15,26 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
 var longestCollatzSeq = function(){
-  // starting at 1 going through 1 million
-  // walk the collatz chain
-     // start steps at 0
-     // check if number is even
-        // divide by two
-    // if number is odd
-       // multiple by three and add 1
-    // if the number is one return the count
-    // if the number is not one add one to number of steps and go to check if number is even
-  // take the max of the number of steps and the max number of steps so far
-  return 0;
+  var longestChainSteps = 0;
+  var longestChainStart = 0;
+  for(var i = 1; i < 1000000; i++){
+    var steps = 0;
+    var number = i;
+    while(number != 1){
+      steps++
+      if(number % 2 === 0){
+        number = number / 2
+      }else{
+        number = number*3 + 1
+      }
+    }
+
+    if(steps > longestChainSteps){
+      longestChainSteps = steps;
+      longestChainStart = i;
+    }
+  }
+  return longestChainStart;
 }
 
 
