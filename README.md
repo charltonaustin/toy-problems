@@ -12,6 +12,6 @@
 1. July 23, 2016 - Euler Problem 009 - Pythagorean triplet which a + b + c = 1000
 1. July 24, 2016 - Euler Problem 010 - Sum of all the primes below two million
 1. July 25, 2016 - Euler Problem 011 - The greatest product of four adjacent numbers
-1. July 26, 2016 - Euler Problem 012 - Value triangle with five hundred divisors
-1. July 27, 2016 - Euler Problem 013 - The first ten digits of sum one-hundred numbers
-1. July 28, 2016 - Euler Problem 014 - Longest Collatz sequence
+1. July 25, 2016 - Euler Problem 012 - Value triangle with five hundred divisors
+1. July 26, 2016 - Euler Problem 013 - The first ten digits of sum one-hundred numbers
+1. July 27, 2016 - Euler Problem 014 - Longest Collatz sequence
