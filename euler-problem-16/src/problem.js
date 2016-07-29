@@ -4,72 +4,58 @@
 What is the sum of the digits of the number 2^1000?
 */
 
-var times = (number, digit) =>{
-  var digitNum = parseInt(digit);
-  var carry = 0;
-  var total = [];
-  for(var i = number.length -1; i >= 0; i--){
-    var currentDigit = parseInt(number[i]);
-    var currentMult = currentDigit * digitNum;
-    var totalDigit = currentMult % 10 ;
-    totalDigit += carry;
-    total.push(totalDigit);
-    carry = Math.floor(currentMult / 10);
-  }
+var returnStringTotal = (carry, total) => {
   if(carry > 0){
-    total.push(""+carry);
+    total.push(carry);
   }
   return total.reverse().join("");
 }
 
-var findPowerOfTwo = (number) =>{
+var times = (number, digit) => {
+  var carry = 0;
+  var total = [];
+  for(var i = number.length -1; i >= 0; i--){
+    var currentMult = parseInt(number[i]) * parseInt(digit) + carry;
+    total.push(currentMult % 10);
+    carry = Math.floor(currentMult / 10);
+  }
+  return returnStringTotal(carry, total);
+}
+
+var findPowerOfTwo = (number) => {
   var two = "2";
   var total = "2";
   for(var i = 1; i < number; i++){
     total = times(total, two);
   }
-
   return total;
 }
 
+var padNumber = (number, length) => {
+  var numberPad = "";  
+  for(var i = 0; i < length - number.length; i++){
+    numberPad+=0
+  }
+  return numberPad + number 
+}
+
 var add = (number1, number2) => {
-  debugger;
   var length = Math.max(number1.length, number2.length);
   var total = [];
   var carry = 0;
-  var number1Pad = "";
-  for(var i = 0; i < length - number1.length; i++){
-    number1Pad+=0
-  }
-  number1 = number1Pad + number1;
-  var number2Pad = "";
-  for(var i = 0; i < length - number2.length; i++){
-    number2Pad+=0
-  }
-  number2 = number2Pad + number2;
-
-
+  number1 = padNumber(number1, length);
+  number2 = padNumber(number2, length);
   for(var i = length -1; i >= 0; i--){
-    var currNum1 = parseInt(number1[i]);
-    var currNum2 = parseInt(number2[i]);
-    currentDigit = (currNum2 + currNum1 + carry)% 10;
-    total.push(currentDigit);
-    carry = Math.floor((currNum1 + currNum2 + carry) / 10);
+    var currentTotal = parseInt(number1[i]) + parseInt(number2[i]) + carry;
+    total.push(currentTotal % 10);
+    carry = Math.floor(currentTotal / 10);
   }
-  if(carry > 0){
-    total.push(""+carry);
-  }
-  return total.reverse().join("");
+  return returnStringTotal(carry, total);
 }
 
-var sumOfPowerOfTwo = (number) => {
-  if(number < 0){
-    return "please use a positive number";
-  }
-  
+var sumPowerOfTwo = (number) => {  
   var power = findPowerOfTwo(number);
   var total = "0";
-  debugger
   for(var i = 0; i < power.length; i++){
     var currentDigit = power[i];
     total = add(total, currentDigit);
@@ -77,5 +63,4 @@ var sumOfPowerOfTwo = (number) => {
   return total;
 }
 
-
-module.exports = {sumOfPowerOfTwo, findPowerOfTwo};
+module.exports = {sumPowerOfTwo, findPowerOfTwo};

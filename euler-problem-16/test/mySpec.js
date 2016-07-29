@@ -1,18 +1,18 @@
 (function () {
   'use strict';
-  var sumOfPowerOfTwo = require('../src/problem.js').sumOfPowerOfTwo;
+  var sumPowerOfTwo = require('../src/problem.js').sumPowerOfTwo;
   var findPowerOfTwo = require('../src/problem.js').findPowerOfTwo;
-  describe('sumOfPowerOfTwo', function () {
+  describe('sumPowerOfTwo', function () {
     it('should return 26', function () {
-      expect(sumOfPowerOfTwo(15)).toBe("26");
+      expect(sumPowerOfTwo(15)).toBe("26");
     });
 
     it('should return 5', function () {
-      expect(sumOfPowerOfTwo(5)).toBe("5");
+      expect(sumPowerOfTwo(5)).toBe("5");
     });
     
-    it('should return ???', function () {
-      expect(sumOfPowerOfTwo(1000)).toBe("1366");
+    it('should return 1366', function () {
+      expect(sumPowerOfTwo(1000)).toBe("1366");
     });
   });
 
