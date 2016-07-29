@@ -16,3 +16,4 @@
 1. July 26, 2016 - Euler Problem 013 - The first ten digits of sum one-hundred numbers
 1. July 27, 2016 - Euler Problem 014 - Longest Collatz sequence
 1. July 28, 2016 - Euler Problem 015 - Lattice paths
+1. July 29, 2016 - Euler Problem 016 - Power digit sum
