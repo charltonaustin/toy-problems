@@ -3,8 +3,7 @@
   var largeSum = require('../src/problem.js');
   describe('largeSum', function () {
     it('should return the right sum', function () {
-      expect(largeSum()).toBe('88086826400');
+      expect(largeSum()).toBe('5537376230');
     });
   });
- 
 })();
