@@ -1,10 +1,9 @@
 (function () {
   'use strict';
-  var someFunction = require('../src/problem.js');
-  describe('someFunction', function () {
-    it('should return 1', function () {
-      expect(someFunction()).toBe(1);
+  var countLetters = require('../src/problem.js');
+  describe('countLetters', function () {
+    it('should return 21124', function () {
+      expect(countLetters()).toBe(21124);
     });
   });
- 
 })();
