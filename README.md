@@ -18,3 +18,5 @@
 1. July 28, 2016 - Euler Problem 015 - Lattice paths
 1. July 29, 2016 - Euler Problem 016 - Power digit sum
 1. July 30, 2016 - Euler Problem 017 - Number letter counts
+1. July 31, 2016 - Euler Problem 018 - Maximum path sum I
+1. Aug  02, 2016 - Euler Problem 019 - Counting Sundays
