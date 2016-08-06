@@ -69,10 +69,34 @@ var filterOutSumsOfAbundantNumbers = (abundantNumbers, possibleNumbers)=>{
   return possibleNumbers
 }
 
+var generateAllPossibleSums = (abundantNumbers)=>{
+  var sums = {};
+  for(var i = 0; i < abundantNumbers.length; i++){
+    for(var j = i; j < abundantNumbers.length; j++){
+      var sum = abundantNumbers[i]+abundantNumbers[j];
+      if(sum > 28123){
+        break;
+      }
+      sums[sum] = true;
+    }
+  }
+  return sums;
+}
+
 var sumNumbers = (numbers) => {
   var total = 0;
   for(var i = 0; i < numbers.length; i++){
     total+=numbers[i];
+  }
+  return total;
+}
+
+var sumNumbersExcept = (exceptions, limit) => {
+  var total = 0;
+  for(var i = 0; i < limit; i++){
+    if(!exceptions[i]){
+      total+=i;      
+    }
   }
   return total;
 }
@@ -89,15 +113,9 @@ var removeMultiplesOfAbundant = (abundantNumbers)=>{
 }
 
 var findSum = ()=>{
-  console.log("starting");
   var abundantNumbers = findAbundantNumbersLessThan(28123);
-  console.log("found abundantNumbers, count is: ", abundantNumbers.length);
-  var possibleNumbers = allPossibleNumbers(28123);
-  console.log("found possibleNumbers");
-  var filteredSums = filterOutSumsOfAbundantNumbers(abundantNumbers, possibleNumbers);
-  console.log("found filteredSums");
-  console.log("filteredSums: ", filteredSums);
-  return sumNumbers(filteredSums);
+  var allPossibleSums = generateAllPossibleSums(abundantNumbers);
+  return sumNumbersExcept(allPossibleSums, 28123);
 }
 
 module.exports = {findSum,
