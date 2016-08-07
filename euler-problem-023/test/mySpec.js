@@ -93,5 +93,4 @@
       expect(findSum()).toEqual(4179871);
     });
   });
-
 })();
