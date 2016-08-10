@@ -40,26 +40,72 @@ var findPrimeN = function(number){
   return primes;
 }
 
-var someFunction = () => {
+var findBs = (xPrimes) => {
+  // take b s.t. b is prime and |b| < 1000
+  var bs = [];
+  var currentPrime = xPrimes[0];
+  var index = 0;
+  while(currentPrime < 1000){
+    bs.push(-currentPrime);
+    bs.push(currentPrime);
+    currentPrime = xPrimes[index++];
+  }
+  return bs;
+} 
+
+var createPrimeSet = (xPrimes) => {
+  var primeSet = {largestPrime: xPrimes[xPrimes.length-1]}
+  for(var i = 0; i < xPrimes.length; i++){
+    primeSet[xPrimes[i]] = true;
+  }
+  return primeSet;
+}
+
+var maxNumberOfPrimes = (size) => {
   // since n=0 => b must be prime, b must be a prime number less than 1000.
   // and since any even number is divisiable by and n=1 => 1 + a + b a must be odd
   // we know that a must also be odd 
   // (a + b + 1) => (odd + odd + 1) => (even + 1) => odd
 
   // generate the some large number of primes (say xPrimes)
-  // take b s.t. b is prime and |b| < 1000
+  var xPrimes = findPrimeN(size);
+  var bs = findBs(xPrimes);
+  var primeSet = createPrimeSet(xPrimes);
+  var largest = {n:0, a:0, b:0};
+
+  for(var i = 0; i < bs.length; i++){
+    var b = bs[i];
     // take a s.t. a is odd and |a| < 1000
-    // take n s.t. n = 0,1,2,3,4...
-       // call n^2 + n*a + b current
-       // if current < last of primes and in primes continue to next n
-       // if current > last of primes return error and increase xPrimes
-       // if current < last of primes and not in primes return n-1
-    // if currentN is greater than greatest set currentN as greatestN
-       // set a as greatestA
-       // set b as greatestB
-    // get next a
-  // get next b
-  return 0;
+    for(var a = -999; a < 1000; a+=2){
+      // take n s.t. n = 0,1,2,3,4...      
+      var n = 0;
+      while(true){
+        // call n^2 + n*a + b current
+        var current = n*n + n*a + b;
+        // if current > last of primes return error and increase xPrimes
+        if(current > primeSet.largestPrime){
+          throw new Error('please set xPrimes size higher');
+        }
+        // if current < last of primes and not in primes return n-1
+        if(!primeSet[current]){
+          break;
+        } 
+        // if current <= last of primes and in primes continue to next n
+        n++;
+      }
+      // if currentN is greater than greatest set currentN as greatestN
+      if(n > largest.n){
+        largest.n = n;
+        // set a as greatestA
+        largest.a = a;
+        // set b as greatestB
+        largest.b = b;
+      }
+      // get next a
+    } 
+    // get next b
+  }
+  return largest.a * largest.b;
 }
 
-module.exports = {someFunction};
+module.exports = {maxNumberOfPrimes};
