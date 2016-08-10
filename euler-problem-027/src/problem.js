@@ -63,7 +63,7 @@ var createPrimeSet = (xPrimes) => {
 
 var maxNumberOfPrimes = (size) => {
   // since n=0 => b must be prime, b must be a prime number less than 1000.
-  // and since any even number is divisiable by and n=1 => 1 + a + b a must be odd
+  // and since any even number is divisiable by 2 and n=1 => 1 + a + b a must be odd
   // we know that a must also be odd 
   // (a + b + 1) => (odd + odd + 1) => (even + 1) => odd
 
@@ -93,12 +93,13 @@ var maxNumberOfPrimes = (size) => {
         // if current <= last of primes and in primes continue to next n
         n++;
       }
-      // if currentN is greater than greatest set currentN as greatestN
+      // if n is greater than largest values
       if(n > largest.n){
+        // update largest n
         largest.n = n;
-        // set a as greatestA
+        // update largest a
         largest.a = a;
-        // set b as greatestB
+        // update largest b
         largest.b = b;
       }
       // get next a
