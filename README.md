@@ -27,3 +27,4 @@
 1. Aug  07, 2016 - Euler Problem 024 - Lexicographic permutations
 1. Aug  08, 2016 - Euler Problem 025 - 1000-digit Fibonacci number
 1. Aug  09, 2016 - Euler Problem 026 - Reciprocal cycles
+1. Aug  10, 2016 - Euler Problem 027 - Quadratic primes
