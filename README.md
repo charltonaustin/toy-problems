@@ -20,3 +20,11 @@
 1. July 30, 2016 - Euler Problem 017 - Number letter counts
 1. July 31, 2016 - Euler Problem 018 - Maximum path sum I
 1. Aug  02, 2016 - Euler Problem 019 - Counting Sundays
+1. Aug  03, 2016 - Euler Problem 020 - Factorial digit sum
+1. Aug  04, 2016 - Euler Problem 021 - Amicable numbers
+1. Aug  05, 2016 - Euler Problem 022 - Names scores
+1. Aug  06, 2016 - Euler Problem 023 - Non-abundant sums
+1. Aug  07, 2016 - Euler Problem 024 - Lexicographic permutations
+1. Aug  08, 2016 - Euler Problem 025 - 1000-digit Fibonacci number
+1. Aug  09, 2016 - Euler Problem 026 - Reciprocal cycles
+1. Aug  10, 2016 - Euler Problem 027 - Quadratic primes
