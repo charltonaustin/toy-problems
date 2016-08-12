@@ -28,3 +28,5 @@
 1. Aug  08, 2016 - Euler Problem 025 - 1000-digit Fibonacci number
 1. Aug  09, 2016 - Euler Problem 026 - Reciprocal cycles
 1. Aug  10, 2016 - Euler Problem 027 - Quadratic primes
+1. Aug  11, 2016 - Euler Problem 028 - Number spiral diagonals
+1. Aug  12, 2016 - Euler Problem 029 - Distinct powers
