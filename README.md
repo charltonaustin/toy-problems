@@ -30,3 +30,4 @@
 1. Aug  10, 2016 - Euler Problem 027 - Quadratic primes
 1. Aug  11, 2016 - Euler Problem 028 - Number spiral diagonals
 1. Aug  12, 2016 - Euler Problem 029 - Distinct powers
+1. Aug  13, 2016 - Euler Problem 030 - Digit fifth powers
