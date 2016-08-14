@@ -31,3 +31,4 @@
 1. Aug  11, 2016 - Euler Problem 028 - Number spiral diagonals
 1. Aug  12, 2016 - Euler Problem 029 - Distinct powers
 1. Aug  13, 2016 - Euler Problem 030 - Digit fifth powers
+1. Aug  14, 2016 - Euler Problem 031 - Coin sums
