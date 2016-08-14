@@ -10,27 +10,19 @@ How many different ways can £2 be made using any number of coins?
 
 var alreadyCalculated = {};
 var count = (denominations, index, amount) => {
-  if(alreadyCalculated[index+":"+amount]){
-    return alreadyCalculated[index+":"+amount];
-  }
   if(amount === 0){
     return 1;
   }
-
   if(amount < 0){
     return 0;
   }
-
   if(index <= 0 && amount > 0){
     return 0;
   }
-  var returnAmount = count(denominations, index - 1, amount) + count(denominations, index, amount-denominations[index-1]);
-  alreadyCalculated[index+":"+amount] = returnAmount;
-  return returnAmount
+  return count(denominations, index - 1, amount) + count(denominations, index, amount-denominations[index-1]);
 } 
 
 var differentWays = (amount) => {
-  debugger;
   var denominations = [1, 2, 5, 10, 20, 50, 100, 200];
   return count(denominations, denominations.length, amount);
 }
