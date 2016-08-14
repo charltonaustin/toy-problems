@@ -1,5 +1,28 @@
-var someFunction = () => {
-  return 0;
+/*
+Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
+    1634 = 1^4 + 6^4 + 3^4 + 4^4
+    8208 = 8^4 + 2^4 + 0^4 + 8^4
+    9474 = 9^4 + 4^4 + 7^4 + 4^4
+As 1 = 1^4 is not a sum it is not included.
+The sum of these numbers is 1634 + 8208 + 9474 = 19316.
+Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
+*/
+
+var findSumPowers = (limit, pow) => {
+  var total = 0;
+  for(var i = 10; i < limit; i++){
+    var sum = 0;
+    var number = i;
+    while(number > 0){
+      var digit = number % 10
+      number = Math.floor(number/10);
+      sum+= Math.pow(digit, pow);
+    }
+    if(sum === i){
+      total+=i;
+    } 
+  } 
+  return total;
 }
 
-module.exports = {someFunction};
+module.exports = {findSumPowers};
