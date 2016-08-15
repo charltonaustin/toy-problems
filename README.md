@@ -32,3 +32,4 @@
 1. Aug  12, 2016 - Euler Problem 029 - Distinct powers
 1. Aug  13, 2016 - Euler Problem 030 - Digit fifth powers
 1. Aug  14, 2016 - Euler Problem 031 - Coin sums
+1. Aug  15, 2016 - Euler Problem 032 - Pandigital products
