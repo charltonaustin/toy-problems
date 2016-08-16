@@ -15,16 +15,9 @@ var findDen = () => {
   var den = 1;
   for(var i = 11; i < 100; i++){
     for(var j = i+1; j < 100; j++){
-      var topFirst = Math.floor(i/10);
-      var topSecond = i % 10;
-      var bottomFirst = Math.floor(j/10);
-      var bottomSecond = j % 10;
-      var fraction = i / j;
-      if(topSecond === bottomFirst){
-        if(fraction === topFirst/bottomSecond && bottomSecond !== 0){
-          num = num * i;
-          den = den * j;
-        }
+      if((i % 10) === Math.floor(j/10) && (i/j) === Math.floor(i/10)/(j % 10)){
+        num = num * i;
+        den = den * j;
       }
     }
   }
@@ -32,5 +25,3 @@ var findDen = () => {
 }
 
 module.exports = {findDen};
-
-findDen()
