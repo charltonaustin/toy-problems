@@ -8,7 +8,6 @@ var findPrimeN = function(number){
     for(var i = start; i < start + growth; i++){
       numbers.push(i);
     }
-
     // Remove composite numbers
     for(var i = 0; i < primes.length; i++){
       for(var j = 0; j < numbers.length; j++){
@@ -17,16 +16,6 @@ var findPrimeN = function(number){
         }
       }
     }
-
-
-    for(var i = 0; i < numbers.length; i++){
-      for(var j = 1; j < numbers.length; j++){
-        if(numbers[j] % number[i] === 0){
-          number.splice(j,1);
-        }
-      }
-    }
-
     // move prime numbers to primes
     for(var i = 0; i < numbers.length; i++){
       primes.push(numbers[i]);
