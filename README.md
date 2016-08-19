@@ -1,6 +1,6 @@
 # toy-problems
 
-1. July 14, 2016 - Telegram Problem - A problem about line wrappings.
+1. July 14, 2016 - Telegram Problem  - A problem about line wrappings.
 1. July 15, 2016 - Euler Problem 001 - Multiples of 3 and 5.
 1. July 16, 2016 - Euler Problem 002 - Even Fibonacci numbers
 1. July 17, 2016 - Euler Problem 003 - Largest prime factor
@@ -36,3 +36,4 @@
 1. Aug  16, 2016 - Euler Problem 032 - Digit cancelling fractions
 1. Aug  17, 2016 - Euler Problem 032 - Digit factorials
 1. Aug  18, 2016 - Euler Problem 033 - Circular primes
+1. Aug  19, 2016 - Euler Problem 034 - Double-base palindromes
