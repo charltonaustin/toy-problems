@@ -1,5 +1,5 @@
 var isPallidrome = function(number){
-  var stringNumber = "" + number;
+  var stringNumber = number.toString();
   for(var i = 0; i < stringNumber.length / 2; i++){
     var lastIndex = stringNumber.length - 1 - i;
     if(stringNumber[i] !== stringNumber[lastIndex]){
@@ -19,6 +19,6 @@ var findPallidromes = function(number){
       }
     }
   }
-  
+
   return largestPallidrome;
 }
