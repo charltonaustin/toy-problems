@@ -33,7 +33,10 @@
 1. Aug  13, 2016 - Euler Problem 030 - Digit fifth powers
 1. Aug  14, 2016 - Euler Problem 031 - Coin sums
 1. Aug  15, 2016 - Euler Problem 032 - Pandigital products
-1. Aug  16, 2016 - Euler Problem 032 - Digit cancelling fractions
-1. Aug  17, 2016 - Euler Problem 032 - Digit factorials
-1. Aug  18, 2016 - Euler Problem 033 - Circular primes
-1. Aug  19, 2016 - Euler Problem 034 - Double-base palindromes
+1. Aug  16, 2016 - Euler Problem 033 - Digit cancelling fractions
+1. Aug  17, 2016 - Euler Problem 034 - Digit factorials
+1. Aug  18, 2016 - Euler Problem 035 - Circular primes
+1. Aug  19, 2016 - Euler Problem 036 - Double-base palindromes
+1. Aug  20, 2016 - Euler Problem 037 - Truncatable primes
+1. Aug  21, 2016 - Euler Problem 038 - Pandigital multiples
+1. Aug  22, 2016 - Euler Problem 039 - Integer right triangles
