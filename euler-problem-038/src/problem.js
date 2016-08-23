@@ -21,67 +21,23 @@ where n > 1?
 */
 
 
-var findLargestPosition = (array) => {
-// Function to find the largest position
-// where elements are out of order
-  var position = -1;
-  for(var i = 0; i < array.length - 1; i++){
-    if(array[i] > array[i+1]){
-      position = i;
+var isPandigital = (number) => {
+  var numbers = number.split("").sort();
+  for(var i = 0; i < numbers.length; i++){
+    if(parseInt(numbers[i]) !== i+1){
+      return false;
     }
   }
-  return position;
+  return true;
 }
 
-var findSmallestPositionToRight = (array, position) => {
-// Function to find the position of the smallest element larger than
-// the element at the position
-  var currentElement = array[position];
-  var returnPosition = -1;
-  var returnElement = Number.NEGATIVE_INFINITY;
-  for(var i = position+1; i < array.length; i++){
-    if(array[i] < currentElement && array[i] > returnElement){
-      returnElement = array[i];
-      returnPosition = i;
+var findPandigitalMultiple = () => {
+  for(var i = 9876; i >= 9123; i--){
+    if(isPandigital(""+i+i*2)){
+      return i
     }
   }
-  return returnPosition;
-}
-
-var swap = (firstPosition, secondPosition, array) => {
-  var temp = array[firstPosition];
-  array[firstPosition] = array[secondPosition];
-  array[secondPosition] = temp;
-  return array;
-}
-
-var reOrderRemaining = (array, position) => {
-// A function to reorder all elements
-// to the right of the position
-  var toRight = array.slice(position+1);
-  toRight.reverse();
-  var reOrderedArray = [];
-  for(var i = 0; i < array.length; i++){
-    if(i <= position){
-      reOrderedArray.push(array[i]);
-    }else{
-      reOrderedArray.push(toRight[i-position-1]);
-    }
-  }
-  return reOrderedArray;
-}
-
-var findNextPermutation = (array) => {
-  var largestPosition = findLargestPosition(array);
-  var smallestPositionRight = findSmallestPositionToRight(array, largestPosition);
-  array = swap(largestPosition, smallestPositionRight, array);
-  array = reOrderRemaining(array, largestPosition);
-  return array;
-}
-
-var someFunction = () => {
-  var permutation = [9,8,7,6,5,4,3,2,1];
   return 0;
 }
 
-module.exports = {findNextPermutation};
+module.exports = {findPandigitalMultiple};

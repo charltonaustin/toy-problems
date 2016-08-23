@@ -9,6 +9,10 @@ The same can be achieved by starting with 9 and multiplying by 1, 2, 3, 4, and 5
 
 What is the largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer with (1,2, ... , n) where n > 1?
 
+I had some real trouble with this guy. So I ended up having to look him up.
+I used some of the analysis from [this](http://www.mathblog.dk/project-euler-38-pandigital-multiplying-fixed-number/) place to come to my solution.
+
+
 [Source](https://projecteuler.net/problem=38)
 
 # Dependencies
