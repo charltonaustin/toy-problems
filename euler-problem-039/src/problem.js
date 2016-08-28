@@ -6,20 +6,6 @@ If p is the perimeter of a right angle triangle with integral length sides, {a,b
 For which value of p ≤ 1000, is the number of solutions maximised?
 */
 
-var gcd = (m, n) => {
-  if(m === n){
-    return m;
-  }
-  if(m > n){
-    return gcd(m -n, n);
-  }
-  return gcd(m, n - m);
-}
-
-var areCoPrime = (m, n) => {
-  return gcd(m,n) === 1;
-}
-
 var calculatePerimeter = (n, m, k) => {
   return k * (m*m - n*n) + k * (2 * m * n) + k * (m * m + n * n);
 }
