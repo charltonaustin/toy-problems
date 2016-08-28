@@ -40,3 +40,4 @@
 1. Aug  20, 2016 - Euler Problem 037 - Truncatable primes
 1. Aug  21, 2016 - Euler Problem 038 - Pandigital multiples
 1. Aug  22, 2016 - Euler Problem 039 - Integer right triangles
+1. Aug  28, 2016 - Euler Problem 040 - Champernowne's constant
