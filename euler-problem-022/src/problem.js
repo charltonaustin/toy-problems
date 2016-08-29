@@ -12,8 +12,49 @@ var readFile = (readFileFunction = fs.readFileSync) => {
   return contents.split(",");
 }
 
+var swap = (contents, firstIndex, secondIndex) => {
+  var temp = contents[firstIndex];
+  contents[firstIndex] = contents[secondIndex];
+  contents[secondIndex] = temp;
+}
+
+var partition = (items, start, end) => {
+  var pivotIndex = Math.floor((start + end) / 2);
+  var pivot   = items[pivotIndex];
+  var i = start;
+  var j = end;
+  while (i <= j) {
+    while (items[i] < pivot) {
+        i++;
+    }
+    while (items[j] > pivot) {
+        j--;
+    }
+    if (i <= j) {
+        swap(items, i, j);
+        i++;
+        j--;
+    }
+  }
+  return i;
+}
+
+var quickSort = (contents, start, end) => {
+  var index;
+  if (contents.length > 1 ){
+    index = partition(contents, start, end);
+    if (start < index - 1) {
+        quickSort(contents, start, index - 1);
+    }
+    if (index < end) {
+        quickSort(contents, index, end);
+    }
+  }
+  return contents;
+}
+
 var sortContents = (contents) => {
-  return contents.sort();
+  return quickSort(contents, 0, contents.length-1)
 }
 
 var getScoreOfWord = (word) => {
