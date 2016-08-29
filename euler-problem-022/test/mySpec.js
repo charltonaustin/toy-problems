@@ -48,22 +48,22 @@
   describe('getScoreOfWord',  () => {
     describe('A', () => {
       it('should return the correct score',  () => {
-        expect(getScoreOfWord("A")).toEqual(65);
+        expect(getScoreOfWord("'A'")).toEqual(1);
       });
     });
     describe('AAAA', () => {
       it('should return the correct score',  () => {
-        expect(getScoreOfWord("AAAA")).toEqual(65 * 4);
+        expect(getScoreOfWord("'AAAA'")).toEqual(1 * 4);
       });
     });
     describe('BRIAN', () => {
       it('should return the correct score',  () => {
-        expect(getScoreOfWord("BRIAN")).toEqual(364);
+        expect(getScoreOfWord("'BRIAN'")).toEqual(44);
       });
     });
     describe('CHARLIE', () => {
       it('should return the correct score',  () => {
-        expect(getScoreOfWord("CHARLIE")).toEqual(504);
+        expect(getScoreOfWord("'CHARLIE'")).toEqual(56);
       });
     });
   });
@@ -71,12 +71,12 @@
   describe('totalNameScores',  () => {
     describe('for stubbed content', ()=>{
       it('should return a total',  () => {
-        expect(totalNameScores(sortContentsStub)).toBe(1372);
+        expect(totalNameScores(sortContentsStub)).toBe(124);
       });
     });
     describe('for file content', ()=>{
       it('should return a total of ????',  () => {
-        expect(totalNameScores()).toBe(6837803474);
+        expect(totalNameScores()).toBe(871198282);
       });
     });
   });

@@ -18,8 +18,8 @@ var sortContents = (contents) => {
 
 var getScoreOfWord = (word) => {
   var total = 0;
-  for(var i = 0; i < word.length; i++){
-    total+= word.charCodeAt(i);
+  for(var i = 1; i < word.length-1; i++){
+    total+= word.charCodeAt(i) - 64;
   }
   return total;
 }
